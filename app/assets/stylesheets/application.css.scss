@@ -1,0 +1,213 @@
+@import "semantic-ui";
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$primary-color: #00B5AD;
+$white-color: #fff;
+$body-background: #f5f7f9;
+$bg-dark: #141617;
+
+body{
+    background-color: $body-background;
+}
+main{
+    section{
+        &.padded {
+            padding: 40px 0;
+        }
+        &.bg-white{
+            background-color: $white-color;
+        }
+        &.bg-teal {
+            background-color: $primary-color;
+        }
+        &.bg-dark{
+            background-color: $bg-dark;
+        }
+    }
+    header {
+        nav{
+            background-color: $white-color;
+        }
+        .ui{
+            &.menu {
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    }
+    #banner {
+        padding: 50px 0;
+        text-align: center;
+        h1, p{
+            color: $white-color;
+        }
+        p{
+            font-size: 1.4rem;
+        }
+    }
+    #how-it-works{
+        .hiw {
+            text-align: center;
+            padding: 20px 0;
+        }
+    }
+    #testimonials{
+        .testimonial{
+            text-align: center;
+            img {
+                width: 100px;
+                border-radius: 50%;
+            }
+            h3{
+                > small{
+                    font-size: 75%;
+                    display: block;
+                    font-weight: 300;
+                    color: #777;
+                }
+            }
+            p{
+                font-size: 1.1rem;
+                color: #444;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+    }
+    #subscribe{
+        text-align: center;
+        .input {
+            &.subscribe {
+                margin-bottom: 20px;
+            }
+            
+        }
+    }
+    #footer{
+        color: $white-color;
+        text-align: center;
+    }
+    .page-content {
+        margin-top: 1rem;
+    }
+
+    #chat{
+        ul{
+            &.chat-list{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                li{
+                    margin-bottom: 0.5rem;
+                    img{
+                        max-width: 50px;
+                        border-radius: 50%;
+                    }
+                    &:after{
+                        content: "";
+                        display: block;
+                        clear: both;
+                    }
+                    &.sent{
+                        div{
+                            > div{
+                                background: #e0ece1;
+                                border-radius: 3px 0 3px 3px;
+                                float: right;
+                                &:after {
+                                    display: block;
+                                    position: absolute;
+                                    background: #e2ece1;
+                                    width: 10px;
+                                    height: 10px;
+                                    content: "";
+                                    right: -5px;
+                                    top: 2px;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                        img{
+                            float: right;
+                            margin-left: 1rem;
+                        }
+                    }
+                    &.recieved{
+                        div{
+                            > div{
+                                background: #e0e4ec;
+                                border-radius: 0 3px 3px;
+                                float: left;
+                                &:before {
+                                    display: block;
+                                    position: absolute;
+                                    background: #e1e5ed;
+                                    width: 10px;
+                                    height: 10px;
+                                    content: "";
+                                    left: -5px;
+                                    top: 2px;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                        }
+                        img{
+                            float: left;
+                            margin-right: 1rem;
+                        }
+                    }
+                    div{
+                        > div{
+                            padding: 5px 10px;
+                            max-width: 60%;
+                            width: 100%;
+                            position: relative;
+                            p{
+                                margin-bottom: 0;
+                            }
+                            span {
+                                color: #888;
+                                font-size: 0.8rem;
+                                float: right;
+                            }
+                        }  
+                    }
+                }
+            }
+        }
+
+        .reply-box{
+            &:after{
+                content: "";
+                display: block;
+                clear: both;
+            }
+            .toolbar{
+                margin-top: 5px;
+                button{
+                    float: right;
+                    margin-right: 0;
+                }
+            }
+        }
+        .chat-box {
+            max-height: calc(100vh - 243px);
+            overflow-y: scroll;
+        }
+    }
+}
